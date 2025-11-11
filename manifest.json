@@ -1,0 +1,21 @@
+{
+  "short_name": "ScrapKart",
+  "name": "ScrapKart - Turn Scrap Into Cash",
+  "description": "A web application for scheduling scrap pickups, donating items, and promoting eco-friendly recycling.",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#2E7D32",
+  "background_color": "#f4f6f8"
+}
