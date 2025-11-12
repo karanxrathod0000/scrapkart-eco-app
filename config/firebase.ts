@@ -1,4 +1,5 @@
 const firebaseConfig = {
+import { getFirestore } from 'firebase/firestore';
   apiKey: "AIzaSyAu-uqD8bSUoq14ERruWYPMbV0RZmSi1Wmc",
   authDomain: "scrapkart-8c065.firebaseapp.com",
   projectId: "scrapkart-8c065",
@@ -10,7 +11,9 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 // Export Firebase services
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
+export { db }; // Re-export db for use in other files
