@@ -134,6 +134,28 @@ const Navbar = ({ onNavigate }: { onNavigate: (page: Page) => void; }) => {
     );
 };
 
+
+// Role Selection Page - shown on login page
+const RoleSelectionPage = ({ onNavigate }: { onNavigate: (page: Page) => void }) => (
+  <div className="form-container-wrapper">
+    <div className="form-container">
+      <h1>Welcome to ScrapKart</h1>
+      <p>Choose your role to login</p>
+      <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '30px' }}>
+        <button onClick={() => onNavigate('login')} style={{ padding: '15px 30px', fontSize: '16px', cursor: 'pointer', backgroundColor: '#4CAF50', color: 'white', border: 'none', borderRadius: '4px' }}>
+          👤 User Login
+        </button>
+        <button onClick={() => onNavigate('login')} style={{ padding: '15px 30px', fontSize: '16px', cursor: 'pointer', backgroundColor: '#2196F3', color: 'white', border: 'none', borderRadius: '4px' }}>
+          🏭 Collector Login
+        </button>
+        <button onClick={() => onNavigate('login')} style={{ padding: '15px 30px', fontSize: '16px', cursor: 'pointer', backgroundColor: '#ff9800', color: 'white', border: 'none', borderRadius: '4px' }}>
+          👨‍💼 Admin Login
+        </button>
+      </div>
+    </div>
+  </div>
+);
+
 // --- Pages ---
 const HomePage = ({ onNavigate }: { onNavigate: (page: Page) => void }) => (
     <>
@@ -642,7 +664,7 @@ const App = () => {
         }
 
         switch (page) {
-            case 'home': return <HomePage onNavigate={handleNavigate} />;
+            case 'home': return return isLoggedIn ? <HomePage onNavigate={handleNavigate} /> : <RoleSelectionPage onNavigate={handleNavigate} />;
             case 'login': return <LoginPage onLoginSuccess={handleLoginSuccess} />;
             // User pages
             case 'dashboard': return <DashboardPage onNavigate={handleNavigate} />;
