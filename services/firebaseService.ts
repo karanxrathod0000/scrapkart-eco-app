@@ -121,7 +121,7 @@ export const listenToActivePickup = (collectorId: string, callback: (pickup: any
      return onSnapshot(q, (querySnapshot) => {
         if (!querySnapshot.empty) {
             const pickupDoc = querySnapshot.docs[0];
-            callback({ id: pickupDoc.id, ...pickupDoc.doc.data() });
+            callback({ id: pickupDoc.id, ...pickupDoc.data() });
         } else {
             callback(null);
         }
