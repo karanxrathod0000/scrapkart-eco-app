@@ -664,7 +664,7 @@ const App = () => {
         }
 
         switch (page) {
-            case 'home': return return isLoggedIn ? <HomePage onNavigate={handleNavigate} /> : <RoleSelectionPage onNavigate={handleNavigate} />;
+            case 'home': return isLoggedIn ? <HomePage onNavigate={handleNavigate} /> : <RoleSelectionPage onNavigate={handleNavigate} />;
             case 'login': return <LoginPage onLoginSuccess={handleLoginSuccess} />;
             // User pages
             case 'dashboard': return <DashboardPage onNavigate={handleNavigate} />;
