@@ -4,15 +4,15 @@ import { GoogleAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: 'AIzaSyAu-uqDbSUoq14ERruWYPMbV0RZmSJ1wmc', 
-  authDomain: 'scrapkart-8c065.firebaseapp.com',
-  
-  projectId: 'scrapkart-8c065',
-  storageBucket: 'scrapkart-8c065.firebasestorage.app',
-  messagingSenderId: '62266874851',
-  appId: '1:62266874851:web:717577b39c4eca2f125ed6',
-  measurementId: 'G-X68X11KYGJ',
+  apiKey: "AIzaSyAu-uqD8bSUoql4ERruWYPMbV0RZmSlWmc",
+  authDomain: "scrapkart-8c065.firebaseapp.com",
+  projectId: "scrapkart-8c065",
+  storageBucket: "scrapkart-8c065.firebasestorage.app",
+  messagingSenderId: "62266874851",
+  appId: "1:62266874851:web:717577b39c4eca2f125ed6",
+  measurementId: "G-XG8X11KYGJ"
 };
 
 const app = initializeApp(firebaseConfig);
