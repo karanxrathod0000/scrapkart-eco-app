@@ -5,7 +5,9 @@ import { getFirestore } from 'firebase/firestore';
 import { getStorage } from 'firebase/storage';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyAu-uqDbSUoq14ERruWYPMbV0RZmSJ1wmc',  authDomain: 'scrapkart-8c065.firebaseapp.com',
+  apiKey: 'AIzaSyAu-uqDbSUoq14ERruWYPMbV0RZmSJ1wmc', 
+  authDomain: 'scrapkart-8c065.firebaseapp.com',
+  
   projectId: 'scrapkart-8c065',
   storageBucket: 'scrapkart-8c065.firebasestorage.app',
   messagingSenderId: '62266874851',
